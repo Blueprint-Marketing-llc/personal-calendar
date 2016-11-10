@@ -7,6 +7,12 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('calendar', function() {
+    this.route('month', { path: 'month/:month'});
+  });
+  this.route('accounts', function() {
+    this.route('new');
+  });
 });
 
 export default Router;
